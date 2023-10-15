@@ -1,5 +1,5 @@
 # MySql-Projects
-******`**Adventure Works SQL Project**`**
+**Adventure Works SQL Project**
 
 Q1 - Prepare a list of offices sorted by country, state, city. 
 Ans: SELECT COUNTRY, STATE, CITY FROM OFFICES ORDER BY COUNTRY, STATE, CITY ASC;
