@@ -1,6 +1,4 @@
-# MySql-Projects
-
-**Adventure Works SQL Project**
+# Adventure Works SQL Project
 
 This SQL project was done using MySql and the database used for this project is AdventureWorks database. This is a sample Dataedo documentation - AdventureWorks - Microsoft SQL Server sample database. The AdventureWorks database supports standard online transaction processing scenarios for a fictitious bicycle manufacturer (Adventure Works Cycles). Scenarios include Manufacturing, Sales, Purchasing, Product Management, Contact Management, and Human Resources.
 
