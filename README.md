@@ -1,47 +1,20 @@
 # MySql-Projects
+
 **Adventure Works SQL Project**
 
-Q1 - Prepare a list of offices sorted by country, state, city. 
-Ans: SELECT COUNTRY, STATE, CITY FROM OFFICES ORDER BY COUNTRY, STATE, CITY ASC;
+This SQL project was done using MySql and the database used for this project is AdventureWorks database. This is a sample Dataedo documentation - AdventureWorks - Microsoft SQL Server sample database.
+The AdventureWorks database supports standard online transaction processing scenarios for a fictitious bicycle manufacturer (Adventure Works Cycles). Scenarios include Manufacturing, Sales, Purchasing, Product Management, Contact Management, and Human Resources.
+The database can be downloaded from the documentation link below:
+file:///C:/Users/LenovoX260/Downloads/AdventureWorks%20Dictionary%20-%20Quantum%20Analytics.pdf
+· AdventureWorks for SQL Server 2014 (CodePlex)
+· AdventureWorks for SQL Server 2012 (CodePlex)
+· AdventureWorks for SQL Server 2008R2 (CodePlex)
 
-Q2 - How many employees are there in the company? 
-Ans: SELECT COUNT(EMPLOYEENUMBER) FROM EMPLOYEES;
+This project showcases my ability to work with a company's database, which includes tables for offices, employees, products, customers, and payments. The project involves executing various SQL queries to perform tasks such as sorting and filtering data, calculating totals and averages, joining tables, and grouping data based on specific criteria.
 
-Q3 - What is the total of payments received? 
-Ans: SELECT SUM(AMOUNT) AS TOTAL_AMOUNTS FROM PAYMENTS;
+The queries in this project cover a wide range of functionalities, including retrieving a sorted list of offices by country, state, and city, determining the number of employees in the company, calculating the total amount of payments received, identifying product lines that include the term 'Cars', and reporting total payments for a specific date.
 
-Q4 - List the product lines that contain 'Cars' 
-Ans: SELECT * FROM PRODUCTLINES WHERE PRODUCTLINE LIKE '%Cars';
+Additionally, the project involves querying for payments exceeding a certain threshold, listing the products in each product line, determining the number of products in each product line, finding the minimum payment received, and listing payments greater than twice the average payment.
+Furthermore, the project explores calculating the average percentage markup of the manufacturer's suggested retail price (MSRP) on the buy price, identifying the distinct products sold by ClassicModels, retrieving customer information without assigned sales representatives, and identifying executives with titles containing "VP" or "Manager".
 
-Q5 - Report total payments for October 28, 2004 
-Ans: SELECT PAYMENTDATE, SUM(AMOUNT) FROM PAYMENTS WHERE PAYMENTDATE = '2004-10-28';
-
-Q6 - Report those payments greater than \\$100,000. 
-Ans: SELECT AMOUNT FROM PAYMENTS WHERE AMOUNT > 100000;
-
-Q7 - List the products in each product line 
-Ans: SELECT DISTINCT PRODUCTLINE FROM PRODUCTS;
-
-Q8 - How many products in each product line?
-Ans: SELECT COUNT(DISTINCT PRODUCTNAME) AS NO_OF_PRODUCTS, PRODUCTLINE FROM PRODUCTS GROUP BY PRODUCTLINE;
-
-Q9 - What is the minimum payment received? 
-Ans: SELECT * FROM PAYMENTS ORDER BY AMOUNT ASC;
-
-Q10 - List all payments greater than twice the average payment. 
-Ans: SELECT * FROM PAYMENTS WHERE AMOUNT >2* (SELECT AVG(AMOUNT) FROM PAYMENTS);
-
-Q11 - What is the average percentage markup of the MSRP on buyPrice? 
-Ans: SELECT BUYPRICE, AVG(MSRP) AS AVG_MSRP_ON_BUYPRICE FROM PRODUCTS GROUP BY BUYPRICE;
-
-Q12 - How many distinct products does ClassicModels sell? 
-Ans: SELECT DISTINCT PRODUCTNAME, COUNT(PRODUCTLINE) FROM PRODUCTS GROUP BY PRODUCTNAME;
-
-Q13 - Report the name and city of customers who don't have sales representatives. 
-Ans: SELECT CUSTOMERNAME, CITY, SALESREPEMPLOYEENUMBER FROM CUSTOMERS WHERE SALESREPEMPLOYEENUMBER IS NULL;
-
-Q14 - What are the names of executives with VP or Manager in their title? Use the CONCAT function to combine the employees first name and last name into a single field for reporting. 
-Ans: SELECT CONCAT (LASTNAME, ' ' , FIRSTNAME) AS EMPLOYEE_NAME, JOBTITLE FROM EMPLOYEES WHERE JOBTITLE LIKE '%VP%' OR JOBTITLE LIKE '%MANAGER%';
-
-Q15 - Which orders have a value greater than $5000?
-Ans: SELECT PAYMENTS.AMOUNT, PAYMENTS.CUSTOMERNUMBER, PAYMENTS.PAYMENTDATE FROM PAYMENTS INNER JOIN ORDERS ON ORDERS.CUSTOMERNUMBER=PAYMENTS.CUSTOMERNUMBER WHERE AMOUNT > 5000 ORDER BY AMOUNT ASC
+In summary, this SQL project demonstrates my proficiency in working with a relational database, utilizing SQL queries to extract and manipulate data effectively. It showcases my skills in data analysis, sorting, filtering, aggregation, and joining tables to derive meaningful insights from the database.
